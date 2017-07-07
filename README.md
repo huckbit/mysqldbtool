@@ -1,6 +1,6 @@
 # mysqldbtool
 
-Launch the script from you terminal:
+Run the script from you terminal:
 
 ```
 ./dbtool.sh
