@@ -23,7 +23,7 @@ menu()
 menu
 while :
 	do
-		read -p "Your choice? " INPUT_STRING
+		read -p "What do you want to do? " INPUT_STRING
 		case $INPUT_STRING in
 		0)
 			clear
