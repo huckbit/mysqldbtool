@@ -1,0 +1,26 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build Systems #
+######################
+node_modules/
+bower_components/
+assets/bower_components/
+assets/images
+.sass-cache
+.app/
+*.css.map
+build/
+dist/
+maps/
+/vendor/
+/logs/*
+!/logs/README.md
+/dump
