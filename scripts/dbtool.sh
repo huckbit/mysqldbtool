@@ -11,7 +11,7 @@ menu()
 	echo "============ DBtool ================"
 	echo "===================================="
 	echo "0) Connect to mysql? - Press 0"
-	echo "1) See all the databases? - Press 1"
+	echo "1) Show databases? - Press 1"
 	echo "2) Create a database? - Press 2"
 	echo "3) Drop a database? - Press 3"
 	echo "4) Import a database dump? - Press 4"

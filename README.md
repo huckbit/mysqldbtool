@@ -13,7 +13,7 @@ and select an option from the menu ...
 ============ DBtool ================
 ====================================
 0) Connect to mysql? - Press 0
-1) See all the databases? - Press 1
+1) Show databases? - Press 1
 2) Create a database? - Press 2
 3) Drop a database? - Press 3
 4) Import a database dump? - Press 4
