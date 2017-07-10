@@ -1,4 +1,8 @@
 #!/bin/sh
+#Config
+DB_USER="root"
+DB_PASSWORD="root"
+
 pause(){
  read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
 }
@@ -27,7 +31,7 @@ while :
 		case $INPUT_STRING in
 		0)
 			clear
-				mysql -u root -p
+				mysql -u $DB_USER -p$DB_PASSWORD
 				echo ""
 				pause
 				menu
@@ -37,7 +41,7 @@ while :
 			echo "Show Databases"
 			echo "=================="
 			echo ""			
-				mysql -u root -p -e "show databases;"
+				mysql -u $DB_USER -p$DB_PASSWORD -e "show databases;"
 				echo ""
 				pause
 				menu
@@ -48,7 +52,7 @@ while :
 			echo "======================"
 			echo ""
 			read -p "Insert the Database Name: "  DB_NAME
-				mysqladmin -u root -p --verbose create $DB_NAME
+				mysqladmin -u $DB_USER -p$DB_PASSWORD --verbose create $DB_NAME
 			echo ""
 			pause
 				menu			
@@ -56,7 +60,7 @@ while :
 		3)
 			clear
 			read -p "Insert the DATABASE NAME: "  DB_NAME
-				mysqladmin -u root -p drop $DB_NAME -v
+				mysqladmin -u $DB_USER -p drop $DB_NAME -v
 			echo ""
 			pause
 				menu		
@@ -69,7 +73,7 @@ while :
 			read -p "Enter the PATH of the dump (path/dumpName.slq): " dumpName
 			echo ""
 			echo "Enter the database password in the next step ..."
-				mysql -u root -p -h localhost -v $DB_NAME < $dumpName
+				mysql -u $DB_USER -p -h localhost -v $DB_NAME < $dumpName
 			echo ""
 			pause
 			menu
@@ -82,7 +86,7 @@ while :
 			read -p "Enter the file name for the dump: " DUMP_NAME
 			echo ""
 				[ -d dump ] $(mkdir dump) #if the folder dump is not present, create it
-				mysqldump -h localhost -u root -p -v $DB_NAME > $(pwd)"/dump/"$DUMP_NAME
+				mysqldump -h localhost -u $DB_USER -p -v $DB_NAME > $(pwd)"/dump/"$DUMP_NAME
 			echo ""
 			echo "You can find your dump file in: "$(pwd)"/dump/"$DUMP_NAME
 			pause

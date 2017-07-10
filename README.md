@@ -1,6 +1,6 @@
 # mysqldbtool
 
-Run the script from you terminal:
+Change `DB_USERNAME` and 'DB_PASSWORD` with your username and password. (the defaul username and password is "root"). Run the script from you terminal:
 
 ```
 ./dbtool.sh
